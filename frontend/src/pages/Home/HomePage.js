@@ -4,6 +4,7 @@ import Thumbnails from '../../components/Thumbnails/Thumbnails';
 import { useParams } from 'react-router-dom';
 import Search from '../../components/Search/Search';
 import Tags from '../../components/Tags/Tags';
+import Hero from '../../components/Hero/Hero';
 
 const initialState = { foods: [], tags: [] };
 
@@ -37,6 +38,7 @@ export default function HomePage() {
 
   return (
     <>
+        <Hero/>
         <Search/>
         <Tags tags={tags}/>
         <Thumbnails foods={foods}/>
