@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import Search from '../../components/Search/Search';
 import Tags from '../../components/Tags/Tags';
 import Hero from '../../components/Hero/Hero';
+import NotFound from '../../components/NotFound/NotFound';
 
 const initialState = { foods: [], tags: [] };
 
@@ -41,6 +42,7 @@ export default function HomePage() {
         <Hero/>
         <Search/>
         <Tags tags={tags}/>
+        {foods.length === 0 && <NotFound linkText="Reset Search"/>}
         <Thumbnails foods={foods}/>
     </>
   )
